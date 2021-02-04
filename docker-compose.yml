@@ -8,11 +8,25 @@ services:
       context: ./nginx
     ports: 
       - "8000:80"
-  nodeserver:
+      
+  nodeserver1:
     build: 
       dockerfile: Dockerfile
       context: ./
+    environment: 
+      PORT: 5000
     depends_on: 
       - nginx
     ports: 
       - "5000"
+
+  nodeserver2:
+    build: 
+      dockerfile: Dockerfile
+      context: ./
+    environment: 
+      PORT: 6000
+    depends_on: 
+      - nginx
+    ports: 
+      - "6000"

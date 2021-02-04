@@ -1,9 +1,9 @@
 import express from 'express'
 
 const app = express()
-const port = process.env.PORT || 5000
+const port = process.env.PORT
 app.get("/api", async (req, resp) => {
-    resp.send("<h1>some html</h1>")
+    resp.send(`<h1>some html ${port}</h1>`)
 })
 
 app.listen(port, ()=>{
