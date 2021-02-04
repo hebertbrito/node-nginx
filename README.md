@@ -1,2 +1,2 @@
 # node-nginx
-Simple project to user an Proxy with Load Balancer
+Simple project to user a Proxy with Load Balancer
